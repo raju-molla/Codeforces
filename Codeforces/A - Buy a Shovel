@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k;
+    cin>>n>>k;
+    int c=1;
+    while(1)
+    {
+        // cout<<n<<endl;
+        int r=n%10;
+        n=n/c;
+        if(k==r || r==0)
+        {
+            break;
+        }
+        c++;
+        n*=c;
+
+    }
+    cout<<c<<endl;
+
+}
