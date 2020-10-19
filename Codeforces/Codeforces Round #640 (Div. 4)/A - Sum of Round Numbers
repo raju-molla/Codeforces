@@ -9,7 +9,7 @@ int main()
     {
         int n;
         cin>>n;
-        string s=to_string(n);
+        //string s=to_string(n);
         vector<int>v;
         int pw=1;
         while(n>0){
