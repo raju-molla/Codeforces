@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int sum=0;
+    int c=0;
+    while(n--){
+        int a;
+        cin>>a;
+
+        if(a>0){
+            sum+=a;
+        }
+        else{
+            if(sum<1){
+                c++;
+            }else{
+                --sum;
+            }
+        }
+    }
+    cout<<c<<endl;
+}
