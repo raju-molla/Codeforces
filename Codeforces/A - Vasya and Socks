@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int n,m;
+    cin>>n>>m;
+    int i=1;
+    int c=1;
+    int ans=1;
+    while(i<n){
+        i++;
+        c++;
+        ans++;
+        if(c==m){
+            i--;
+            c=0;
+        }
+    }
+    cout<<ans<<endl;
+}
