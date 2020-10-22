@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>v;
+    if(n%2==0){
+        int i=2;
+        while(n!=0){
+            v.push_back(i);
+            n-=i;
+        }
+    }
+    else{
+        int i=2;
+        int j=3;
+        while(n!=0){
+            if(n!=3){
+                v.push_back(i);
+                n-=i;
+            }
+            else{
+                v.push_back(j);
+                n-=j;
+            }
+        }
+    }
+    cout<<v.size()<<endl;
+    for(int &x:v)cout<<x <<" ";
+      
+}
