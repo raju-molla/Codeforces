@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    int c=0;
+    for(int i=1; i<=n; i++){
+       if(m%i==0 && m/i<=n){
+           c++;
+       }
+    }
+    cout<<c<<endl;
+    
+}
