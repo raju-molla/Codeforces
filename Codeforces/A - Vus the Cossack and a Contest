@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,k,m;
+    cin>>n>>k>>m;
+    if(n<=k && n<=m){
+        cout<<"YES"<<endl;
+    }
+    else{
+        cout<< "NO"<<endl;
+    }
+
+}
