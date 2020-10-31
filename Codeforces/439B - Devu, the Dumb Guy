@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define srt(v) sort(v.begin(),v.end())
+#define rev(v) reverse(v.begin(),v.end())
+#define FOR(n) for(int i=0; i<n; i++)
+#define ll long long 
+#define lli long long int 
+#define PB push_back
+
+int main()
+{
+    int n,x;
+    cin>>n>>x;
+    vector<ll>v;
+    FOR(n){
+        int a;
+        cin>>a;
+        v.PB(a);
+    }
+    srt(v);
+    ll ans=0;
+    FOR(n)
+    {
+        ans+=v[i]*max(x-i,1);
+    }
+    cout<<ans<<endl;
+
+}
