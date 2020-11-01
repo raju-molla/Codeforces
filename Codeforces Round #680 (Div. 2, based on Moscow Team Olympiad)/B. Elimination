@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n;
+    cin>>n;
+    while(n--){
+        int a,b,c,d;
+        cin>>a>>b>>c>>d;
+        int A=a+b;
+        int B=c+d;
+        cout<<max(A,B)<<endl;
+    }
+}
