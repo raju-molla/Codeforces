@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a1[n];
+    int MIN=101,MAX=0,a,b;
+    for(int i=0; i<n; i++){
+        cin>>a1[i];
+    }
+    for(int i=0; i<n; i++){
+        if(a1[i]>MAX){
+            MAX=a1[i];
+            a=i;
+        }
+        if(a1[i]<=MIN){
+            MIN=a1[i];
+            b=i;
+        }
+    }
+    if(a>b){
+        b++;
+    }
+    cout<<a+(n-1)-b<<endl;
+   
+}
