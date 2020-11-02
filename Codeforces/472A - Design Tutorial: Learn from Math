@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int solve(int num)
+{
+    int flag=0;
+    int l=sqrt(num);
+    for (int i = 2; i<=l; i++)
+        if (num % i == 0)
+            return 2;
+ 
+    return 1;
+        
+}
+
+
+int main()
+{
+    int n;
+    cin>>n;
+    int x=4;
+    int y=n-4;
+    while(x<=y){
+        int ans=solve(x);
+        int ans2=solve(y);
+        if(ans==2 && ans2==2){
+            cout<<x<< " "<<y<<endl;
+            break;
+        }
+        else{
+            x++;
+            y--;
+        }
+    }
+    
+}
