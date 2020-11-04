@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define lli long long int 
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        lli n,k;
+        cin>>n>>k;
+        lli a[n+1];
+        for(int i=0; i<n; i++){
+            cin>>a[i];
+        }
+        sort(a,a+n);
+        reverse(a,a+n);
+        lli ans=0;
+        for(int i=0; i<=k; i++){
+            ans+=a[i];
+        }
+        cout<<ans<<endl;
+    }
+}
