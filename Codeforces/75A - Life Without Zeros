@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+ll solve(ll n){
+    ll ans=0,res=1;
+
+    while(n>0){
+        ll rem=n%10;
+        if(rem!=0){
+            ans+=rem*res;
+            res*=10;
+        }
+        n/=10;
+    }
+    return ans;
+}
+
+
+int main()
+{
+    ll a ,b;
+    cin>>a>>b;
+    ll c= a+b;
+    int A=solve(a);
+    int B=solve(b);
+    int C=solve(c);
+
+    if(A+B==C)cout<< "YES"<<endl;
+    else cout<< "NO"<<endl;
+    
+    
+
+}
