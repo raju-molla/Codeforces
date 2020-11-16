@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
+        int r_even=0;
+        int r_odd=0;
+        int b_even=0;
+        int b_odd=0;
+
+        for(int i=0; i<n; i++){
+            if(i%2==0){
+                if((s[i]-'0')%2==0){
+                    r_even++;
+                }else{
+                    r_odd++;
+                }
+            }else{
+                if((s[i]-'0')%2==0){
+                    b_even++;
+                }else{
+                    b_odd++;
+                }
+            }
+        }
+        if(n%2==0){
+            if(b_even>0)cout<<2<<endl;
+            else cout<< 1<<endl;
+        }else{
+            if(r_odd>0)cout<<1<<endl;
+            else cout<<2<<endl;
+        }
+    }
+}
