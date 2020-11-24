@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        int a[n];
+        for(int i=0; i<n; i++){
+            cin>>a[i];
+            
+        }
+        if(n==1){
+            cout<< "1"<<endl;
+        }else{
+            map<int,int>m;
+            for(int i=0; i<n; i++){
+                m[a[i]]++;
+            }
+            int str=-11;
+            int flag=0;
+            int mn=INT_MAX;
+            for(auto it=m.begin(); it!=m.end(); it++){
+                if(it->second ==1){
+                    mn=min(mn,it->first);
+                    str=mn;   
+                    
+                }
+            }
+            // cout<<str<<endl;
+
+            if(str==-11){
+                cout<< "-1"<<endl;
+            }else{
+                for(int i=0; i<n; i++){
+                    if(str==a[i]){
+                        cout<<i+1<<endl;
+                        break;
+                    }
+                }
+            }
+        }
+       
+    }
+}
