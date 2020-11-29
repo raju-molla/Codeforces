@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+
+int main()
+{
+    int n;
+    cin>>n;
+    int aZero=0,aOne=0,bZero=0,bOne=0;
+    for(int i=0; i<n; i++){
+         int a,b;
+         cin>>a>>b;
+         if(a==0)aZero++;
+         else aOne++;
+         if(b==0)bZero++;
+         else bOne++;
+    }
+    cout<<min(aZero,aOne)+min(bOne,bZero)<<endl;
+    
+}
