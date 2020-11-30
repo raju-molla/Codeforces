@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ForN(i,a,b) for(int i=a; i<b; i++)
+#define ForE(i,a,b) for(int i=a; i<=b; i++)
+
+int main(){
+
+    Fast
+    
+    int n,m;
+    cin>>n>>m;
+    int mx=0;
+    int ans;
+    int i;
+    ForE(i,1,n){
+        double t;
+        cin>>t;
+        if(ceil(t/m)>=mx){
+            ans=i;
+            mx=ceil(t/m);
+        }
+    }
+    cout<<ans<<endl;
+    
+
+}
+
