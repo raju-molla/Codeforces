@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ForN(i,a,b) for(int i=a; i<b; i++)
+#define ForE(i,a,b) for(int i=a; i<=b; i++)
+
+int main(){
+
+    Fast
+    int n;
+    cin>>n;
+    int i;
+    int ans=0;
+    int x[10000],y[10000];
+    ForN(i,0,n){
+        cin>>x[i]>>y[i];
+    }
+    int j;
+    bool right[200],left[200],low[200],up[200];
+    ForN(i,0,n){
+        ForN(j, 0, n){
+            if(x[i]==x[j] && y[i]<y[j]) up[i]=true;
+            else if(x[i]==x[j] && y[i]>y[j]) low[i]=true;
+            else if(x[i]>x[j] && y[i]==y[j]) left[i]=true;
+            else if(x[i]<x[j] && y[i]==y[j]) right[i]=true;
+        }
+    }
+
+    ForN(i,0,n){
+        if(right[i]==true && left[i]==true && low[i]==true && up[i]==true){
+            ans++;
+        }
+    }
+    cout<<ans<<endl;
+    
+
+}
+
