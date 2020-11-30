@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ForN(i,a,b) for(int i=a; i<b; i++)
+#define ForE(i,a,b) for(int i=a; i<=b; i++)
+
+int main(){
+
+    Fast
+    int n;
+    cin>>n;
+    int arr[n+1];
+    int i;
+    int sum=0;
+    ForN(i,0,n){
+        cin>>arr[i];
+        sum+=arr[i];
+    }
+    int ans=0;
+    ForE(i,1,5){
+        if((sum+i)%(n+1)!=1){
+            ans++;
+        }
+    }
+    cout<<ans<<endl;   
+    
+}
+
