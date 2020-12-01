@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int 
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ForN(i,a,b) for(int i=a; i<b; i++)
+#define ForE(i,a,b) for(int i=a; i<=b; i++)
+
+// set<int>st;
+
+
+int main(){
+
+    Fast
+
+    ll a,b,c;
+    cin>>a>>b>>c;
+   ll s1=sqrt(a*b/c);
+   ll s2=sqrt(a*c/b);
+   ll s3=sqrt(c*b/a);
+   ll sum= s1+s2+s3;
+   cout<<4*sum<<endl;
+
+
+}
+
