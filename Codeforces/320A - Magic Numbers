@@ -1,0 +1,53 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ForN(i,a,b) for(int i=a; i<b; i++)
+#define ForE(i,a,b) for(int i=a; i<=b; i++)
+
+int main()
+{
+
+    Fast
+    int n;
+    cin>>n;
+    string s=to_string(n);
+    int i;
+    if(s[0]!='1')
+    {
+        cout<< "NO"<<endl;
+        return 0;
+    }
+    int x=0,y=0;
+    int flag=0;
+
+    ForN(i,0,s.size())
+    {
+        char c=s[i];
+        int p=int(c);
+        p=p-48;
+        if(p==1)
+        {                           ///114114
+
+            x++;
+            y=0;
+        }
+        else
+        {
+            y++;
+            x=0;
+        }
+        if(y>2 || (p!=4 && p!=1))
+        {
+            flag=1;
+            break;
+        }
+
+    }
+    if(flag==1)cout<< "NO"<<endl;
+    else
+    {
+        cout<< "YES"<<endl;
+    }
+}
+
