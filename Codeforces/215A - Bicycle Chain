@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ForN(i,a,b) for(int i=a; i<b; i++)
+#define ForE(i,a,b) for(int i=a; i<=b; i++)
+
+int main()
+{
+
+    Fast
+    int n;
+    cin>>n;
+    int a[n];
+    int i;
+    ForN(i,0,n){
+        cin>>a[i];
+    }
+    int m;
+    cin>>m;
+    int b[m];
+    ForN(i,0,m){
+        cin>>b[i];
+    }
+    int ans = INT_MIN;
+    int j;
+    vector<int>v;
+    ForN(i,0,m){
+        ForN(j, 0, n){
+            if(b[i]%a[j]==0){
+                ans=max(ans,(b[i]/a[j]));
+                v.push_back(b[i]/a[j]);
+                //cout<<b[i]/a[j]<<endl;
+            }
+        }
+    }
+    int c=0;
+    ForN(i,0,v.size()){
+        if(v[i]==ans){
+            c++;
+        }
+    }
+    cout<<c<<endl;
+}
+
