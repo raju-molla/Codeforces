@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ForN(i,a,b) for(int i=a; i<b; i++)
+#define ForE(i,a,b) for(int i=a; i<=b; i++)
+
+int main()
+{
+
+    Fast
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
+        vector<char>v;
+        for(int i=0; i<n; i++){
+                v.push_back(s[i]);
+        }
+        sort(v.begin(), v.end());
+        for(int i=0; i<n; i++){
+            cout<<v[i];
+        }
+        cout<<endl;
+    }
+}
+
