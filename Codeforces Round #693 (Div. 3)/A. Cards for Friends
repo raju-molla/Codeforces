@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+
+int main()
+{
+
+     Fast
+     int t;
+     cin>>t;
+     while(t--){
+       int w,h,n;
+       cin>>w>>h>>n;
+       ll ans=1;
+       while(w%2==0){
+            w=w/2;
+            ans*=2;
+       }
+       while(h%2==0){
+            h=h/2;
+            ans*=2;
+       }
+       if(ans>=n)cout<< "YES"<<endl;
+       else cout<< "NO"<<endl;
+
+     }
+
+
+}
+
+
+
+
+ 
