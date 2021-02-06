@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int x,y;
+        cin>>x>>y;
+        string s;
+        cin>>s;
+        int i=0;
+        int l=s.size();
+        int rx=0,ry=0,lx=0,ly=0;
+        while(l--){
+            if(s[i]=='U')ry++;
+            else if(s[i]=='D')ly--;
+            else if(s[i]=='R')rx++;
+            else if(s[i]=='L')lx--;
+            i++;
+        }
+        if(x<=rx && x>=lx && y<=ry && y>=ly){
+            cout<< "YES"<<endl;
+        }
+        else cout<< "NO"<<endl;
+
+
+    }
+
+}
