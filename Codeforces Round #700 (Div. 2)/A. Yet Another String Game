@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+        string ans="";
+        for(int i=0; i<s.size(); i++){
+            if(i%2==0){
+               for(int j=97; j<=122; j++){
+                    char p=char(j);
+                    if(p!=s[i]){
+                        ans+=p;
+                        break;
+                    }
+               }
+            }
+            else if(i%2){
+               for(int j=122; j>=97; j--){
+                    char p=char(j);
+                    if(p!=s[i]){
+                        ans+=p;
+                        break;
+                    }
+               }
+            }
+
+        }
+        cout<<ans<<endl;
+
+    }
+}
