@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Sort(v) sort(v.begin(),v.end())
+#define pb(v) push_back(v)
+#define For(strt,n) for(int i=strt; i<n; i++)
+int main()
+{
+
+   int t;
+   cin>>t;
+   while(t--){
+        int n;
+        cin>>n;
+        vector<int>v(n);
+        int cnt=0;
+        For(0,n){
+            cin>>v[i];
+        }
+       Sort(v);
+       int mn=v[0];
+       For(0,n){
+            if(v[i]>mn){
+                cnt++;
+            }
+       }
+       cout<<cnt<<endl;
+
+    }
+
+
+
+}
