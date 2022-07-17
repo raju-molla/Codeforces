@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main(){
+
+    int t;
+    cin>>t;
+    while(t--){
+      int n , k ;
+      cin>>n>>k;
+      vector<int>v(n);
+      for(int i=0; i<n; i++){
+        cin>>v[i];
+      }
+      map<int,int>last,first;
+       //map<int, int>::iterator itr;
+      for(int i=0; i<n; i++){
+        last[v[i]]=i;
+      }
+      for(int i=n-1; i>=0; i--){
+        first[v[i]]=i;
+      }
+
+      /*for( itr = last.begin(); itr != last.end(); ++itr){
+        cout<<itr->first<< "\t"<<itr->second<<endl;
+      }
+      for( itr = first.begin(); itr != first.end(); ++itr){
+        cout<<itr->first<< "\t"<<itr->second<<endl;
+      }*/
+      while(k--){
+        int a,b;
+        cin>>a>>b;
+        if(first.count(a) == 0 || last.count(b)==0){
+            cout<< "NO\n";
+            continue;
+        }
+        if(first[a]<=last[b]){
+            cout<< "YES\n";
+        }
+        else{
+            cout<< "NO\n";
+        }
+      }
+    }
+}
