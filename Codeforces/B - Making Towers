@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        vector<int>v[n+1];
+        for(int i=1; i<=n; i++){
+            int x;
+            cin>>x;
+            v[x].push_back(i);
+        }
+        for(int i=1; i<=n; i++){
+            if(v[i].size()<=1){
+                cout<<v[i].size()<<" ";
+            }
+            else{
+                 int c = 1;
+                 for(int j = 1; j<v[i].size(); j++){
+                    //cout<<v[i][j]<< "\t"<<v[i][j-1]<<endl;
+                    int res = v[i][j] - v[i][j-1];
+                    res--;
+                    if(res%2==0){
+                        c++;
+                    }
+                 }
+                 cout<<c<< " ";
+            }
+        }
+        cout<<endl;
+
+    }
+}
